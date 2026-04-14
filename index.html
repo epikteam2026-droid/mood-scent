@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MOODSCENT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="header">
+   <div class="header-inner"> <!-- 🔥 추가 -->
+
+    <h1 class="logo">
+      <a href="/index.html">MOODSCENT</a>
+    </h1>
+
+    <nav class="nav">
+      <a href="/category/best.html">BEST</a>
+      <a href="/category/new.html">NEW</a>
+
+      <div class="nav-dropdown">
+        <a href="/category/perfume.html">BEAUTY</a>
+        <div class="dropdown-menu">
+          <a href="/category/perfume.html">Perfume</a>
+          <a href="/category/cosmetics.html">Cosmetics</a>
+          <a href="/category/hairmist.html">Hairmist</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- 메인 -->
+<section class="hero">
+  <div class="hero-inner">
+    <img src="https://t3.ftcdn.net/jpg/18/59/40/96/360_F_1859409658_wbeipmsZjGzlbllLAUMvycvAPXELO1gB.jpg" class="hero-img">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-text">
+      <span class="hero-brand">MOOD SCENT</span>
+      <h1>당신의 무드를 완성하는 향</h1>
+      <p>Luxury Fragrance Collection</p>
+    </div>
+  </div>
+</section>
+
+  <!-- 카테고리 -->
+  <section class="categories-section">
+
+  <div class="categories">
+
+    <a href="/category/best.html" class="category-link">
+        <div class="category">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/2854/2854316.png">
+            </div>
+        <p class="title">
+        <span>BEST ITEMS</span>
+        인기 아이템
+        </p>
+        </div>
+    </a>
+
+    <a href="/category/new.html" class="category-link">
+        <div class="category">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/10786/10786060.png">
+            </div>
+        <p class="title">
+        <span>New Arrivals</span>
+        신상 입고
+        </p>
+        </div>
+    </a>
+
+    <a href="/category/perfume.html" class="category-link">
+        <div class="category">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/12276/12276286.png">
+            </div>
+        <p class="title">
+        <span>Perfume</span>
+        향수
+        </p>
+        </div>
+    </a>
+
+    <a href="/category/cosmetics.html" class="category-link">
+        <div class="category">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/3163/3163203.png">
+            </div>
+        <p class="title">
+        <span>Cosmetics</span>
+        화장품
+        </p>
+        </div>
+    </a>
+
+    <a href="/category/hairmist.html" class="category-link">
+        <div class="category">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/17828/17828508.png">
+            </div>
+        <p class="title">
+        <span>Hair Mist</span>
+        헤어미스트
+        </p>
+        </div>
+    </a>
+
+    <a href="https://open.kakao.com/o/gVtt1rpi" target="_blank" rel="noopener noreferrer" class="category-link">
+        <div class="category">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/1653/1653630.png">
+            </div>
+        <p class="title">
+        <span>Contact</span>
+        문의하기
+        </p>
+        </div>
+    </a>
+  </div>
+
+</section>
+
+  <script>
+  const links = document.querySelectorAll('.nav a');
+
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+
+      // 전체 active 제거
+      links.forEach(l => l.classList.remove('active'));
+
+      // 클릭한 메뉴 활성화
+      this.classList.add('active');
+
+      // 🔥 BEATY 하위 클릭 시 부모도 강조
+      if (this.closest('.dropdown-menu')) {
+        document.querySelector('.nav-dropdown > a').classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
